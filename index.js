@@ -3,7 +3,7 @@ const app = express();
 const router = require('./route/routes')
 const cors = require('cors');
 const mongoose = require('mongoose')
-const PostModel = require('./model/model')
+
 
 
 //Middleware

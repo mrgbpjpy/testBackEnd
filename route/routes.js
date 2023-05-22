@@ -4,6 +4,7 @@ const PostModel = require('../model/model');
 
 router.get('/', async (req, res) => {
   // Handle GET request
+  res.send('Congrats!!!')
 });
 
 router.get('/Posting', async (req, res) => {
