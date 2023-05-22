@@ -14,7 +14,7 @@ router.get('/Posting', async (req, res) => {
     });
 
    testRun.save();
-   res.send('SuccessFul Post! :)')
+   
   } catch (error) {
     console.log('Error in POST /Posting:', error);
     res.status(500).send('Server error');
