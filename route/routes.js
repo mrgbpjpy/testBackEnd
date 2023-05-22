@@ -1,26 +1,24 @@
 const express = require('express');
 const router = express.Router();
+const PostModel = require('../model/model');
 
-router.get('/', async (req,res)=>{
-    try{
-        res.send(`
-        <h1>Home Page</h1>
-        <h4>Testing...</h4>
-        `)
-    }catch(error){
-        console.error(error);
-        return res.status(500).send("Server error");
-    }
-})
-router.get('/About', async (req,res)=>{
-    try{
-        res.send(`
-        <h1>About Page</h1>
-        `)
-    }catch(error){
-        console.error(error);
-        return res.status(500).send("Server error");
-    }
-})
+router.get('/', async (req, res) => {
+  // Handle GET request
+});
+
+router.get('/Posting', async (req, res) => {
+  try {
+    const testRun = new PostModel({
+      name: "Erick Esquilin",
+      description: "Second Post from Endpoint"
+    });
+
+   testRun.save();
+   res.send('SuccessFul Post! :)')
+  } catch (error) {
+    console.log('Error in POST /Posting:', error);
+    res.status(500).send('Server error');
+  }
+});
 
 module.exports = router;
