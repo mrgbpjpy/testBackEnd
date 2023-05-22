@@ -5,7 +5,7 @@ router.get('/', async (req,res)=>{
     try{
         res.send(`
         <h1>Home Page</h1>
-        <h4>Testing</h4>
+        <h4>Testing...</h4>
         `)
     }catch(error){
         console.error(error);
